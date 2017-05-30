@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.admin.study.login.dao.LoginDao">
+	<select id="goLogin" parameterType="com.admin.study.login.dao.LoginSC" resultType="com.admin.study.login.dao.LoginVO" >
+		SELECT
+			*
+		FROM study.member_tb
+		WHERE ADMIN_ID = #{userId}
+		AND   ADMIN_PWD = #{password}
+	</select>
+</mapper>
